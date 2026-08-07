@@ -1,116 +1,78 @@
-body{
-    background:#070707;
-    color:white;
-    font-family:Arial, sans-serif;
-    margin:0;
-}
+const container = document.getElementById("games");
+const search = document.getElementById("search");
+const frame = document.getElementById("gameFrame");
 
 
-header{
-    background:#111;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 0 20px black;
-}
+function loadGames(list){
+
+    container.innerHTML="";
 
 
-h1{
-    font-size:50px;
-    color:#00ffff;
-    text-shadow:0 0 20px cyan;
-}
+    list.forEach(game=>{
 
 
-input{
-    width:60%;
-    max-width:500px;
-    padding:15px;
-    border-radius:10px;
-    border:none;
-    font-size:18px;
-}
+        container.innerHTML += `
+
+        <div class="card">
+
+        <img src="${game.image}">
+
+        <h2>${game.name}</h2>
+
+        <p>${game.category}</p>
 
 
-#player{
-    padding:25px;
-}
+        <button onclick="playGame('${game.link}')">
+        PLAY
+        </button>
 
 
-#gameFrame{
-    width:100%;
-    height:700px;
-    border:none;
-    background:black;
-    border-radius:15px;
-    box-shadow:0 0 25px #00ffff;
-}
+        </div>
+
+        `;
 
 
-.title{
-    padding-left:30px;
-}
-
-
-#games{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:25px;
-    padding:30px;
-}
-
-
-.card{
-
-    background:#151515;
-    padding:15px;
-    border-radius:15px;
-
-    transition:.3s;
-
-}
-
-
-.card:hover{
-
-    transform:scale(1.05);
-    box-shadow:0 0 20px cyan;
+    });
 
 }
 
 
 
-.card img{
+function playGame(url){
 
-    width:100%;
-    height:160px;
-    object-fit:cover;
-    border-radius:10px;
+    frame.src=url;
 
-}
+    window.scrollTo({
 
+        top:0,
 
+        behavior:"smooth"
 
-button{
-
-    width:100%;
-    padding:12px;
-
-    background:#00ffff;
-    border:none;
-
-    border-radius:10px;
-
-    font-size:18px;
-
-    cursor:pointer;
+    });
 
 }
 
 
-button:hover{
 
-    background:white;
+loadGames(games);
 
-}
+
+
+search.addEventListener("input",()=>{
+
+
+let text = search.value.toLowerCase();
+
+
+let filtered = games.filter(game=>
+
+game.name.toLowerCase().includes(text)
+
+);
+
+
+
+loadGames(filtered);
+
+
+});
