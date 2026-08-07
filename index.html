@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Games</title>
-    <style>
-        body{
-            font-family:Arial;
-            background:#111;
-            color:white;
-            text-align:center;
-        }
-
-        .game{
-            display:inline-block;
-            padding:20px;
-            margin:15px;
-            background:#222;
-            border-radius:10px;
-            text-decoration:none;
-            color:white;
-        }
-
-        .game:hover{
-            background:#333;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Portal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🎮 My Games</h1>
+<header>
+    <h1>🎮 My Game Portal</h1>
 
-<a class="game" href="games/snake/index.html">
-🐍 Snake
-</a>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search games..."
+    >
+</header>
 
-<a class="game" href="games/tetris/index.html">
-🧱 Tetris
-</a>
+<main class="games" id="games">
 
-<a class="game" href="games/pong/index.html">
-🏓 Pong
-</a>
+    <a class="card" href="games/snake/index.html">
+        <h2>Snake</h2>
+        <p>Classic snake game.</p>
+    </a>
+
+    <a class="card" href="games/pong/index.html">
+        <h2>Pong</h2>
+        <p>Retro table tennis.</p>
+    </a>
+
+    <a class="card" href="games/tetris/index.html">
+        <h2>Tetris</h2>
+        <p>Stack the blocks.</p>
+    </a>
+
+    <a class="card" href="games/breakout/index.html">
+        <h2>Breakout</h2>
+        <p>Break every brick.</p>
+    </a>
+
+</main>
+
+<button id="themeBtn">🌙 Toggle Theme</button>
+
+<script src="script.js"></script>
 
 </body>
 </html>
