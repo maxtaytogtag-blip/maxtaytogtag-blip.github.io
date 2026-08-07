@@ -1,104 +1,86 @@
-const games = [
+function openGame(url) {
+
+    let gameWindow = window.open(
+        "",
+        "_blank"
+    );
 
 
-{
+    gameWindow.document.write(`
 
-name:"Mr Racer",
+        <!DOCTYPE html>
 
-image:
-"https://via.placeholder.com/400x250?text=Mr+Racer",
+        <html>
 
-category:"Racing",
+        <head>
 
-description:
-"High speed racing game with cars and traffic.",
+        <title>Just Games</title>
 
-link:
-"<iframe src="https://www.crazygames.com/game/mr-racer---car-racing" width="800" height="450" frameborder="0"></iframe>
-"
+        <style>
 
+        body {
 
-},
+            margin:0;
+            background:black;
+            overflow:hidden;
 
-
-
-{
-
-name:"Moto X3M",
-
-image:
-"https://play.famobi.com/moto-x3m",
-
-category:"Racing",
-
-description:
-"Extreme motorcycle stunt racing.",
-
-link:
-"<a href="https://play.famobi.com/moto-x3m" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none;color:inherit;width:100%;max-width:460px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #dedede;box-shadow:0 1px 4px rgba(0,0,0,0.1);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="width:100%;aspect-ratio:16 / 9;background:rgba(0,0,0,0.05);overflow:hidden"></div><div style="padding:14px 16px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:15px"><img src="https://play.famobi.com/favicon.ico" alt="" style="width:15px;height:15px;border-radius:4px;flex-shrink:0" /><span style="font-size:11px;font-weight:400;color:#999999;letter-spacing:0.5px;text-transform:uppercase">famobi.com</span></div><div style="font-size:16px;font-weight:400;color:#000000;line-height:1.4;margin:0">MotoX3M</div></div></a>"
+        }
 
 
-},
+        iframe {
+
+            width:100vw;
+            height:100vh;
+            border:none;
+
+        }
 
 
+        button {
 
-{
+            position:absolute;
+            top:10px;
+            right:10px;
 
-name:"Drift Hunters",
+            padding:10px 15px;
 
-image:
-"https://via.placeholder.com/400x250?text=Drift+Hunters",
+            background:#00aaff;
 
-category:"Racing",
+            color:white;
 
-description:
-"Customize cars and master drifting.",
+            border:none;
 
-link:
-"https://mountain-game-games.github.io/g/drifthunters/index.html"
+            border-radius:10px;
 
+            cursor:pointer;
 
-},
+            z-index:5;
 
+        }
 
+        </style>
 
-{
-
-name:"Zombie Survival",
-
-image:
-"https://via.placeholder.com/400x250?text=Zombie",
-
-category:"Action",
-
-description:
-"Survive waves of zombies.",
-
-link:
-"https://example.com"
+        </head>
 
 
-},
+        <body>
 
 
+        <button onclick="document.documentElement.requestFullscreen()">
 
-{
+        Fullscreen
 
-name:"Puzzle Master",
+        </button>
 
-image:
-"https://via.placeholder.com/400x250?text=Puzzle",
 
-category:"Puzzle",
+        <iframe src="${url}"></iframe>
 
-description:
-"Solve challenging puzzles.",
 
-link:
-"https://example.com"
+        </body>
 
+
+        </html>
+
+    `);
 
 }
-
-
-];
