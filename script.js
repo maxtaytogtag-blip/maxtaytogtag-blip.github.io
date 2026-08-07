@@ -3,7 +3,9 @@ const search = document.getElementById("search");
 const frame = document.getElementById("gameFrame");
 
 
+
 function loadGames(list){
+
 
     container.innerHTML="";
 
@@ -15,16 +17,16 @@ function loadGames(list){
 
         <div class="card">
 
-        <img src="${game.image}">
+            <img src="${game.image}">
 
-        <h2>${game.name}</h2>
+            <h2>${game.name}</h2>
 
-        <p>${game.category}</p>
+            <p>${game.category}</p>
 
 
-        <button onclick="playGame('${game.link}')">
-        PLAY
-        </button>
+            <button onclick="playGame('${game.link}')">
+                PLAY
+            </button>
 
 
         </div>
@@ -34,21 +36,24 @@ function loadGames(list){
 
     });
 
+
 }
 
 
 
 function playGame(url){
 
-    frame.src=url;
 
-    window.scrollTo({
+    frame.src = url;
 
-        top:0,
+
+    document.getElementById("player")
+    .scrollIntoView({
 
         behavior:"smooth"
 
     });
+
 
 }
 
@@ -61,18 +66,18 @@ loadGames(games);
 search.addEventListener("input",()=>{
 
 
-let text = search.value.toLowerCase();
+    let text = search.value.toLowerCase();
 
 
-let filtered = games.filter(game=>
+    let filtered = games.filter(game =>
 
-game.name.toLowerCase().includes(text)
+        game.name.toLowerCase()
+        .includes(text)
 
-);
+    );
 
 
-
-loadGames(filtered);
+    loadGames(filtered);
 
 
 });
