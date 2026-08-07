@@ -1,162 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Just Games</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <header>
+
     <h1>🎮 Just Games</h1>
+
     <p>Games I Think</p>
 
+
     <input 
-        id="searchBar" 
-        type="text" 
+        id="searchBar"
+        type="text"
         placeholder="Search games..."
     >
+
 </header>
 
 
-<section class="games" id="games">
+
+<main>
+
+    <section class="games" id="games">
+
+        <!-- Games load from games.js -->
+
+    </section>
+
+</main>
 
 
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/32/responsive/Highway-Traffic-2-lg.jpg">
-        <h2>Highway Traffic</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2022/unity/highway-traffic/index.html')">
-            Play
-        </button>
-    </div>
 
 
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/1002/responsive/Rooftop-Duel-Online-lg.jpg">
-        <h2>Rooftop Duel</h2>
-        <button onclick="openGame('https://cloud.onlinegames.io/games/2025/construct/213/rooftop-duel/index-og.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/510/responsive/Geometry-Dash-FreezeNova-lg.jpg">
-        <h2>Geometry Dash FreezeNova</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2023/q2/geometry-dash-freezenova/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/323/responsive/Highway-Racer-2-lg.jpg">
-        <h2>Highway Racer 2</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2022/unity2/highway-racer-2/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/971/responsive/Cookie-Clicker-Pro-Game-lg.jpg">
-        <h2>Cookie Clicker Pro</h2>
-        <button onclick="openGame('https://cloud.onlinegames.io/games/2025/unity/cookie-clicker-pro/index-og.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/698/responsive/Drunken-Duel-lg.jpg">
-        <h2>Drunken Duel</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2024/code/2/drunken-duel/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/715/responsive/Crazy-Stickman-Physics-lg.jpg">
-        <h2>Crazy Stickman Physics</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2023/construct/185/crazy-stickman-physics/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/127/responsive/Sniper-Elite-Online-lg.jpg">
-        <h2>Sniper Elite</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2021/1/sniper-elite/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/218/responsive/Wasteland-Shooters-lg.jpg">
-        <h2>Wasteland Shooters</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2021/unity2/wasteland-shooters/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/1000/responsive/Escape-Car-lg.jpg">
-        <h2>Escape Car</h2>
-        <button onclick="openGame('https://cloud.onlinegames.io/games/2025/unity2/escape-car/index-og.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/397/responsive/Drift-Hunters-Pro-lg.jpg">
-        <h2>Highway Racer Pro</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2024/unity/highway-racer-pro/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/843/responsive/Basket-Hoop-lg.jpg">
-        <h2>Basket Hoop</h2>
-        <button onclick="openGame('https://cloud.onlinegames.io/games/2024/construct/311/basket-hoop/index-og.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/327/responsive/Burnout-Drift-Hunter-Online-lg.jpg">
-        <h2>Burnout Drift Hunter</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2022/unity4/burnout-drift-hunter/index.html')">
-            Play
-        </button>
-    </div>
-
-
-    <div class="game-card">
-        <img src="https://www.onlinegames.io/media/posts/397/responsive/Drift-Hunters-Pro-lg.jpg">
-        <h2>Drift King</h2>
-        <button onclick="openGame('https://www.onlinegames.io/games/2024/unity/drift-king/index.html')">
-            Play
-        </button>
-    </div>
-
-
-</section>
-
+<script src="games.js"></script>
 
 <script src="script.js"></script>
+
 <script src="game.js"></script>
 
+
 </body>
+
 </html>
