@@ -1,49 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Game Portal</title>
+    <title>The games</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <h1>🎮 My Game Portal</h1>
-
-    <input
-        type="text"
-        id="search"
-        placeholder="Search games..."
-    >
+    <h1>THE GAMES</h1>
+    <input id="search" placeholder="Search games...">
 </header>
 
-<main class="games" id="games">
 
-    <a class="card" href="games/snake/index.html">
-        <h2>Snake</h2>
-        <p>Classic snake game.</p>
-    </a>
+<div id="player">
+    <iframe id="gameFrame" src=""></iframe>
+</div>
 
-    <a class="card" href="games/pong/index.html">
-        <h2>Pong</h2>
-        <p>Retro table tennis.</p>
-    </a>
 
-    <a class="card" href="games/tetris/index.html">
-        <h2>Tetris</h2>
-        <p>Stack the blocks.</p>
-    </a>
+<h2 class="title">Games</h2>
 
-    <a class="card" href="games/breakout/index.html">
-        <h2>Breakout</h2>
-        <p>Break every brick.</p>
-    </a>
+<div id="games"></div>
 
-</main>
 
-<button id="themeBtn">🌙 Toggle Theme</button>
-
+<script src="games.js"></script>
 <script src="script.js"></script>
 
 </body>
